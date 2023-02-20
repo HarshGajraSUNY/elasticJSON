@@ -127,4 +127,9 @@ We keep proceeding further until entire unique key is processed for all the oper
 
 Same is followed for "N" : "0666" and we get the end result in JSON ARRAY
 
+
 [{"list_3":[666,777]}]
+
+
+All the transformation criteria are applied according to respective Transformation Models (Number,String,Null etc) who implement the Transformer Interface. 
+
