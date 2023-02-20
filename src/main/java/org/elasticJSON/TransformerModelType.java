@@ -1,4 +1,4 @@
-package org.example;
+package org.elasticJSON;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -8,7 +8,11 @@ public enum TransformerModelType {
     BOOLEAN("BOOL"),
     STRING("S"),
     NULL("NULL"),
-    NUMBER("N");
+    NUMBER("N"),
+    LIST("L"),
+    MAP("M");
+
+
 
     public final String label;
     private static final Map<String, TransformerModelType> lookup ;

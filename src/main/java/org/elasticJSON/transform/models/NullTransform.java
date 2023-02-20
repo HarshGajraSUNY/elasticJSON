@@ -1,7 +1,8 @@
-package org.example.transform.models;
+package org.elasticJSON.transform.models;
 
 import org.json.JSONException;
-import org.json.JSONObject;
+
+import java.util.Map;
 
 /**
  * **NULL** represents the `Null` data type.
@@ -15,8 +16,11 @@ import org.json.JSONObject;
 public class NullTransform implements  Transformer{
 
 
+
+
     @Override
-    public Object transform(String val) throws JSONException {
+    public Object transform(String val,String opsName,  String[] miniKeys, int i,
+                            Map<String, Object> ansMap,String[] transformations) throws JSONException {
         String ans =null;
         if(!val.trim().isEmpty()){
             val = sanitize(val);

@@ -1,7 +1,8 @@
-package org.example.transform.models;
+package org.elasticJSON.transform.models;
 
 import org.json.JSONException;
-import org.json.JSONObject;
+
+import java.util.Map;
 
 /**
  * **N** represents the `Number` data type.
@@ -17,7 +18,8 @@ public class NumberTransform implements  Transformer{
 
 
     @Override
-    public Object transform(String  val) throws JSONException {
+    public Object transform(String val,String opsName,  String[] miniKeys, int i,
+                            Map<String, Object> ansMap, String[] transformations) throws JSONException {
 
         try{
              val = sanitize(val);

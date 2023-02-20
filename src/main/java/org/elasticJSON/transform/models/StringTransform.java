@@ -1,8 +1,9 @@
-package org.example.transform.models;
+package org.elasticJSON.transform.models;
 
 import org.json.JSONException;
 
 import java.time.Instant;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -26,7 +27,8 @@ public class StringTransform implements Transformer{
 
 
     @Override
-    public Object transform(String val) throws JSONException {
+    public Object transform(String val,String opsName,  String[] miniKeys, int i,
+                            Map<String, Object> ansMap, String[] transformations) throws JSONException {
 
         if(!val.trim().isEmpty()){
             val = sanitize(val);
