@@ -61,6 +61,7 @@ public class JsonTransformEntry {
             array.put(finalAnsMap);
             System.out.println();
             System.out.println(array);
+            System.out.println();
 
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -119,7 +120,7 @@ public class JsonTransformEntry {
                     prevs = miniKeys[i].trim();
                 }
                 for (int i = transformations.length - 1; i >= 0; i--) {
-                    //  map_1.M.list_1.L#1.N
+                    //  map_1.M.list_1.L#1.N ->777
                     String opsName = transformations[i].trim();
                     if (opsName.contains("#")) {
                         opsName = removeLastChar(opsName);
@@ -145,11 +146,10 @@ public class JsonTransformEntry {
                             break;
                         }
                         if (obj instanceof JSONObject) {
-                            //JSONObject transformedObj = new JSONObject(obj);
                             ansMap.put(miniKeys[i], obj);
                         } else if (obj instanceof JSONArray) {
                             JSONArray jsonArray = (JSONArray) obj;
-                            //jsonArray.put(transformedObj);
+
                             ansMap.put(miniKeys[i], jsonArray);
                         } else {
                             ansMap.put(miniKeys[i], obj);
