@@ -58,7 +58,7 @@ Input Json:
 }
 ````
 
-Running instructions
+**Running instructions**
 
 (you need gradle on CLI to run and build this project so install gradle 
 using
@@ -75,10 +75,14 @@ cd elasticJSON
 gradle build
 gradle run
 
-That's it! you will see the output transformed json array.
+That's it! you will see the output transformed json array in stdout.
 ````
 
+**Acceptance criteria**
+
+Submission is **complete** with all the required criteria except the map structure is not lexically sorted
 
 
+**Time Taken to run**
 
-
+The code takes 0.082 seconds to execute and transform the input json as per profiling.
