@@ -58,4 +58,27 @@ Input Json:
 }
 ````
 
+Running instructions
+
+(you need gradle on CLI to run and build this project so install gradle 
+using
+_**brew install gradle**_
+)
+Download the zip from https://github.com/HarshGajraSUNY/elasticJSON
+
+Using _**git clone**_ https://github.com/HarshGajraSUNY/elasticJSON.git
+
+````
+RUN INSTRUCTIONS
+
+cd elasticJSON
+gradle build
+gradle run
+
+That's it! you will see the output transformed json array.
+````
+
+
+
+
 
