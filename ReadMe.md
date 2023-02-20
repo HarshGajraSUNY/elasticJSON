@@ -86,3 +86,45 @@ Submission is **complete** with all the required criteria except the map structu
 **Time Taken to run**
 
 The code takes 0.082 seconds to execute and transform the input json as per profiling.
+
+
+**Logic Behind the Solution**
+
+Recursively parse the JSON object to flatten and reach the leaf nodes which will then be individually processed according to their
+data type i.e Process a Number Transform according to the methods set in the NumberTransform Model or process a String transform according to criteria set by StringTransform Model.
+
+While we we recursively iterate the JSON object we also store the ancestor history to build a set of QUEUE based operation to follow 
+For example
+
+````
+{
+  "list_3": {
+    "L": [
+      {
+        "N": "777"
+      },
+      {
+        "N": "0666"
+      }
+    ]
+  }
+}
+````
+
+We recursively reach leafnode "N" - "777" and also have key as list_3.L.N#1 created to map out the keys in order from root to leafnode
+
+Now this object will be transformed according to last operation in key N#0 where N is the operation (Number transform) and # is separator followed by number used to make it unique since there is 1 more N present with value 0666
+
+After this we create a set of queue operations to be performed for list_3.L.N#1
+
+N -> Number Transform
+
+L -> create a list transform
+
+list-3 -> store the result till not under key "list-3" and create a new JSON object 
+
+We keep proceeding further until entire unique key is processed for all the operations uptil the root node "list_3" in this case.
+
+Same is followed for "N" : "0666" and we get the end result in JSON ARRAY
+
+[{"list_3":[666,777]}]
