@@ -1,6 +1,6 @@
 Welcome to **elasticJSON**.
 
-This Project serves as a utility to tranform an input json into the required output json following all the required transformation criterias.
+This Project serves as a utility to tranform an input json into the required output json following all the required transformation Criteria.
 
 Input Json:
 
